@@ -72,26 +72,6 @@
     });
   });
 
-  /* ---------- Newsletter form ---------- */
-  const form = document.getElementById('newsletterForm');
-  const msg = document.getElementById('newsletterMsg');
-  if (form && msg) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = form.querySelector('input[type="email"]');
-      const val = email.value.trim();
-      const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
-      if (!ok) {
-        msg.style.color = 'var(--color-rose)';
-        msg.textContent = 'Please enter a valid email.';
-        return;
-      }
-      msg.style.color = 'var(--color-gold)';
-      msg.textContent = 'You\'re in! Check your inbox for 10% off.';
-      form.reset();
-    });
-  }
-
   /* ---------- Animated stat counters ---------- */
   const statEls = document.querySelectorAll('[data-count]');
   if ('IntersectionObserver' in window && !prefersReducedMotion) {
