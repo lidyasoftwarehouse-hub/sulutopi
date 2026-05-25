@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sulutopi — Çocuklar için boyama kitleri. Kids watercolor kits. Be the first to know.">
+  <title>Sulutopi — Links</title>
+
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Page-specific layout for the Linktree-style page */
+    .links-page {
+      min-height: 100vh;
+      padding: var(--space-6) var(--space-2) var(--space-8);
+      display: flex;
+      justify-content: center;
+    }
+    .links-card {
+      width: 100%;
+      max-width: 520px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-3);
+    }
+    .links-avatar {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--color-surface);
+      box-shadow: var(--shadow-md);
+      border: 4px solid var(--color-surface);
+    }
+    .links-title {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      text-align: center;
+      color: var(--color-text);
+      margin: 0;
+    }
+    .links-desc {
+      text-align: center;
+      color: var(--color-text-soft);
+      font-size: 1rem;
+      line-height: 1.55;
+      max-width: 380px;
+      margin: 0;
+    }
+    .links-desc .line + .line { margin-top: 6px; }
+    .links-socials {
+      display: flex;
+      gap: var(--space-2);
+      margin: var(--space-1) 0 var(--space-3);
+    }
+    .links-socials a {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-surface);
+      color: var(--color-text);
+      font-size: 1.25rem;
+      border: 1px solid var(--color-line);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--t) var(--ease),
+                  background var(--t) var(--ease),
+                  color var(--t) var(--ease),
+                  border-color var(--t) var(--ease);
+    }
+    .links-socials a:hover {
+      transform: translateY(-3px) scale(1.06);
+      background: var(--grad-primary);
+      color: #ffffff;
+      border-color: transparent;
+    }
+
+    .links-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    /* Featured card with hero image */
+    .lt-card {
+      display: block;
+      background: var(--color-surface);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      transition: transform var(--t) var(--ease),
+                  box-shadow var(--t) var(--ease),
+                  border-color var(--t) var(--ease);
+    }
+    .lt-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(255, 111, 97, 0.4);
+    }
+    .lt-card--feature .lt-card__media {
+      padding: var(--space-2) var(--space-2) 0;
+    }
+    .lt-card--feature .lt-card__media img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+    }
+    .lt-card__body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-1);
+      padding: var(--space-3) var(--space-3);
+      font-family: var(--font-body);
+      font-weight: 600;
+      color: var(--color-text);
+      text-align: center;
+    }
+
+    /* Stack card with side thumbnail (Trendyol style) */
+    .lt-card--stack { position: relative; }
+    .lt-card--stack .lt-card__body { padding: var(--space-3) var(--space-6); }
+    .lt-card--stack .lt-card__thumb {
+      position: absolute;
+      left: var(--space-1);
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      object-fit: contain;
+      background: #ffffff;
+      padding: 4px;
+    }
+
+    .links-footer {
+      margin-top: var(--space-5);
+      text-align: center;
+      color: var(--color-text-mute);
+      font-size: 0.8125rem;
+    }
+    .links-footer a { color: var(--color-primary-deep); }
+
+    .links-cta {
+      margin-top: var(--space-3);
+    }
+
+    @media (max-width: 480px) {
+      .links-title { font-size: 1.5rem; }
+      .links-avatar { width: 96px; height: 96px; }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="links-page">
+    <section class="links-card">
+      <img
+        src="images/logo_sulutopi.png"
+        alt="Sulutopi logo"
+        class="links-avatar"
+        loading="eager"
+        fetchpriority="high">
+
+      <h1 class="links-title">Sulutopi</h1>
+
+      <p class="links-desc">
+        <span class="line">Çocuklar için boyama kitleri · Çok yakında</span>
+        <span class="line">Kids watercolor kits · Be the first to know</span>
+      </p>
+
+      <nav class="links-socials" aria-label="Social media">
+        <a href="https://instagram.com/sulutopi" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <iconify-icon icon="ph:instagram-logo-duotone"></iconify-icon>
+        </a>
+        <a href="https://www.facebook.com/sulutopi" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <iconify-icon icon="ph:facebook-logo-duotone"></iconify-icon>
+        </a>
+        <a href="https://tiktok.com/@sulutopi" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <iconify-icon icon="ph:tiktok-logo-duotone"></iconify-icon>
+        </a>
+      </nav>
+
+      <div class="links-list">
+        <a class="lt-card lt-card--feature"
+           href="https://www.instagram.com/sulutopi"
+           target="_blank" rel="noopener noreferrer">
+          <div class="lt-card__media">
+            <img src="images/logo_sulutopi.png" alt="">
+          </div>
+          <div class="lt-card__body">Çok Yakında — Sulutopi</div>
+        </a>
+
+        <a class="lt-card lt-card--stack"
+           href="https://ty.gl/5w7m624y44fco"
+           target="_blank" rel="noopener noreferrer">
+          <img class="lt-card__thumb" src="images/logo_sulutopi.png" alt="">
+          <div class="lt-card__body">Boyamaya Başla — Kalemleri Keşfet</div>
+        </a>
+
+        <a class="lt-card lt-card--stack" href="index.html">
+          <iconify-icon
+            icon="ph:storefront-duotone"
+            class="lt-card__thumb"
+            style="display:grid;place-items:center;font-size:1.6rem;color:var(--color-primary-deep);">
+          </iconify-icon>
+          <div class="lt-card__body">Ana Sayfa — Sulutopi</div>
+        </a>
+
+        <a class="lt-card lt-card--stack" href="mailto:info@sulutopi.com">
+          <iconify-icon
+            icon="ph:envelope-duotone"
+            class="lt-card__thumb"
+            style="display:grid;place-items:center;font-size:1.6rem;color:var(--color-primary-deep);">
+          </iconify-icon>
+          <div class="lt-card__body">Bize Ulaş — info@sulutopi.com</div>
+        </a>
+      </div>
+
+      <footer class="links-footer">
+        © <span id="year"></span> Sulutopi · Made with love for little artists.
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
