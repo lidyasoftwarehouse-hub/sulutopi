@@ -3,21 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sulutopi — Çocuklar için boyama kitleri. Kids watercolor kits. Be the first to know.">
-  <title>Sulutopi — Links</title>
+  <meta name="description" content="Sulutopi — Çocuklar için boyama kitleri · Kids watercolor kits. All our links in one place.">
+  <title>Sulutopi · All Links</title>
+
+  <link rel="icon" href="images/logo_sulutopi.png" type="image/png">
 
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
 
   <link rel="stylesheet" href="css/styles.css">
   <style>
-    /* Page-specific layout for the Linktree-style page */
-    .links-page {
+    /* =========================================================
+       LINKTREE-STYLE PAGE — Sulutopi
+       Reuses tokens from css/styles.css for theme consistency.
+       ========================================================= */
+    body {
+      background:
+        radial-gradient(900px 600px at 80% -10%,
+          rgba(255, 148, 120, 0.28), transparent 60%),
+        radial-gradient(700px 600px at 10% 20%,
+          rgba(140, 202, 255, 0.22), transparent 60%),
+        radial-gradient(700px 600px at 50% 110%,
+          rgba(201, 182, 245, 0.22), transparent 60%),
+        var(--color-bg);
+      background-attachment: fixed;
+    }
+
+    /* ---- Top bar ---- */
+    .lt-topbar {
+      position: fixed;
+      top: var(--space-2);
+      left: 0;
+      right: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 540px;
+      margin: 0 auto;
+      padding: 0 var(--space-2);
+    }
+    .lt-pill {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      color: var(--color-text);
+      font-size: 1.1rem;
+      backdrop-filter: blur(14px) saturate(160%);
+      -webkit-backdrop-filter: blur(14px) saturate(160%);
+      transition: transform var(--t) var(--ease),
+                  background var(--t) var(--ease);
+    }
+    .lt-pill:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    /* ---- Page wrapper ---- */
+    .lt-page {
       min-height: 100vh;
-      padding: var(--space-6) var(--space-2) var(--space-8);
+      padding: 80px var(--space-2) var(--space-8);
       display: flex;
       justify-content: center;
     }
-    .links-card {
+    .lt-card-stack {
       width: 100%;
       max-width: 520px;
       display: flex;
@@ -25,46 +77,70 @@
       align-items: center;
       gap: var(--space-3);
     }
-    .links-avatar {
-      width: 112px;
-      height: 112px;
+
+    /* ---- Profile header ---- */
+    .lt-profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: var(--space-2);
+    }
+    .lt-avatar-wrap {
+      position: relative;
+      padding: 6px;
+      border-radius: 50%;
+      background: var(--grad-primary);
+      box-shadow: 0 12px 32px -10px rgba(255, 111, 97, 0.55);
+    }
+    .lt-avatar {
+      display: block;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
       background: var(--color-surface);
-      box-shadow: var(--shadow-md);
       border: 4px solid var(--color-surface);
     }
-    .links-title {
-      font-family: var(--font-display);
-      font-size: 1.75rem;
-      font-weight: 700;
-      text-align: center;
-      color: var(--color-text);
+    .lt-name {
       margin: 0;
+      font-family: var(--font-display);
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: var(--color-text);
+      letter-spacing: -0.01em;
     }
-    .links-desc {
-      text-align: center;
+    .lt-handle {
+      margin: 0;
+      font-size: 0.875rem;
+      color: var(--color-text-mute);
+      letter-spacing: 0.04em;
+    }
+    .lt-bio {
+      margin: var(--space-1) 0 0;
+      max-width: 420px;
       color: var(--color-text-soft);
       font-size: 1rem;
       line-height: 1.55;
-      max-width: 380px;
-      margin: 0;
     }
-    .links-desc .line + .line { margin-top: 6px; }
-    .links-socials {
+    .lt-bio .lt-line + .lt-line { margin-top: 4px; }
+    .lt-bio .lt-em { color: var(--color-primary-deep); font-weight: 600; }
+
+    /* ---- Socials ---- */
+    .lt-socials {
       display: flex;
       gap: var(--space-2);
-      margin: var(--space-1) 0 var(--space-3);
+      margin-top: var(--space-1);
     }
-    .links-socials a {
+    .lt-socials a {
       display: grid;
       place-items: center;
-      width: 44px;
-      height: 44px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       background: var(--color-surface);
       color: var(--color-text);
-      font-size: 1.25rem;
+      font-size: 1.4rem;
       border: 1px solid var(--color-line);
       box-shadow: var(--shadow-sm);
       transition: transform var(--t) var(--ease),
@@ -72,166 +148,337 @@
                   color var(--t) var(--ease),
                   border-color var(--t) var(--ease);
     }
-    .links-socials a:hover {
-      transform: translateY(-3px) scale(1.06);
+    .lt-socials a:hover {
+      transform: translateY(-3px) scale(1.05);
       background: var(--grad-primary);
       color: #ffffff;
       border-color: transparent;
     }
 
-    .links-list {
+    /* ---- Link list ---- */
+    .lt-links {
       width: 100%;
       display: flex;
       flex-direction: column;
       gap: var(--space-2);
+      margin-top: var(--space-3);
     }
 
-    /* Featured card with hero image */
-    .lt-card {
+    .lt-link {
+      position: relative;
       display: block;
       background: var(--color-surface);
       border: 1px solid var(--color-line);
-      border-radius: var(--radius-lg);
+      border-radius: 22px;
       box-shadow: var(--shadow-sm);
       overflow: hidden;
       transition: transform var(--t) var(--ease),
                   box-shadow var(--t) var(--ease),
                   border-color var(--t) var(--ease);
     }
-    .lt-card:hover {
+    .lt-link:hover {
       transform: translateY(-3px);
       box-shadow: var(--shadow-md);
       border-color: rgba(255, 111, 97, 0.4);
     }
-    .lt-card--feature .lt-card__media {
-      padding: var(--space-2) var(--space-2) 0;
+
+    /* Featured card (with banner image) */
+    .lt-link--feature .lt-link__banner {
+      position: relative;
+      padding: 10px 10px 0;
     }
-    .lt-card--feature .lt-card__media img {
+    .lt-link--feature .lt-link__banner img {
       width: 100%;
       aspect-ratio: 16 / 9;
       object-fit: cover;
-      border-radius: var(--radius-md);
+      border-radius: 16px;
+      background: var(--color-surface-2);
     }
-    .lt-card__body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: var(--space-1);
-      padding: var(--space-3) var(--space-3);
-      font-family: var(--font-body);
-      font-weight: 600;
-      color: var(--color-text);
+    .lt-link--feature .lt-link__chin {
+      padding: var(--space-2) var(--space-3);
       text-align: center;
+      font-weight: 700;
+      color: var(--color-text);
     }
 
-    /* Stack card with side thumbnail (Trendyol style) */
-    .lt-card--stack { position: relative; }
-    .lt-card--stack .lt-card__body { padding: var(--space-3) var(--space-6); }
-    .lt-card--stack .lt-card__thumb {
-      position: absolute;
-      left: var(--space-1);
-      top: 50%;
-      transform: translateY(-50%);
+    /* Stack card */
+    .lt-link--stack { display: flex; align-items: center; min-height: 64px; padding: 8px; }
+    .lt-link--stack .lt-link__thumb {
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
       width: 48px;
       height: 48px;
-      border-radius: var(--radius-sm);
-      object-fit: contain;
+      border-radius: 12px;
       background: #ffffff;
+      color: var(--color-primary-deep);
+      font-size: 1.4rem;
+      object-fit: contain;
+      overflow: hidden;
+    }
+    .lt-link--stack .lt-link__thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
       padding: 4px;
     }
+    .lt-link--stack .lt-link__title {
+      flex: 1;
+      text-align: center;
+      padding: 0 56px 0 8px;
+      font-weight: 600;
+      color: var(--color-text);
+      line-height: 1.25;
+    }
 
-    .links-footer {
-      margin-top: var(--space-5);
+    /* Badge (Çok Yakında / Soon) */
+    .lt-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--grad-primary);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(255, 111, 97, 0.4);
+    }
+
+    /* ---- Footer ---- */
+    .lt-footer {
+      margin-top: var(--space-6);
       text-align: center;
       color: var(--color-text-mute);
       font-size: 0.8125rem;
     }
-    .links-footer a { color: var(--color-primary-deep); }
-
-    .links-cta {
-      margin-top: var(--space-3);
+    .lt-footer a { color: var(--color-primary-deep); }
+    .lt-footer .lt-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--color-text);
     }
 
+    /* ---- Entrance animations (respects reduced motion) ---- */
+    .lt-reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: lt-rise 0.7s var(--ease) forwards;
+    }
+    @keyframes lt-rise {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .lt-reveal {
+        opacity: 1;
+        transform: none;
+        animation: none;
+      }
+    }
+
+    /* ---- Toast for share copy ---- */
+    .lt-toast {
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%) translateY(20px);
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: var(--color-text);
+      color: var(--color-bg);
+      font-size: 0.875rem;
+      box-shadow: var(--shadow-md);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--t) var(--ease),
+                  transform var(--t) var(--ease);
+      z-index: 50;
+    }
+    .lt-toast.is-visible {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ---- Responsive ---- */
     @media (max-width: 480px) {
-      .links-title { font-size: 1.5rem; }
-      .links-avatar { width: 96px; height: 96px; }
+      .lt-avatar { width: 104px; height: 104px; }
+      .lt-name { font-size: 1.625rem; }
+      .lt-bio { font-size: 0.9375rem; }
     }
   </style>
 </head>
 <body>
 
-  <main class="links-page">
-    <section class="links-card">
-      <img
-        src="images/logo_sulutopi.png"
-        alt="Sulutopi logo"
-        class="links-avatar"
-        loading="eager"
-        fetchpriority="high">
+  <header class="lt-topbar" aria-label="Top bar">
+    <a class="lt-pill" href="index.html" aria-label="Home">
+      <iconify-icon icon="ph:house-duotone"></iconify-icon>
+    </a>
+    <button class="lt-pill" id="shareBtn" aria-label="Share this page">
+      <iconify-icon icon="ph:share-network-duotone"></iconify-icon>
+    </button>
+  </header>
 
-      <h1 class="links-title">Sulutopi</h1>
+  <main class="lt-page">
+    <section class="lt-card-stack">
 
-      <p class="links-desc">
-        <span class="line">Çocuklar için boyama kitleri · Çok yakında</span>
-        <span class="line">Kids watercolor kits · Be the first to know</span>
-      </p>
+      <!-- Profile -->
+      <div class="lt-profile lt-reveal" style="animation-delay: 0.05s;">
+        <div class="lt-avatar-wrap">
+          <img
+            class="lt-avatar"
+            src="images/logo_sulutopi.png"
+            alt="Sulutopi logo"
+            loading="eager"
+            fetchpriority="high">
+        </div>
+        <h1 class="lt-name">Sulutopi</h1>
+        <p class="lt-handle">@sulutopi</p>
+        <p class="lt-bio">
+          <span class="lt-line">
+            <span class="lt-em">Çocuklar için boyama kitleri</span> · Çok yakında
+          </span>
+          <span class="lt-line">
+            <span class="lt-em">Kids watercolor kits</span> · Be the first to know
+          </span>
+        </p>
 
-      <nav class="links-socials" aria-label="Social media">
-        <a href="https://instagram.com/sulutopi" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <iconify-icon icon="ph:instagram-logo-duotone"></iconify-icon>
-        </a>
-        <a href="https://www.facebook.com/sulutopi" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <iconify-icon icon="ph:facebook-logo-duotone"></iconify-icon>
-        </a>
-        <a href="https://tiktok.com/@sulutopi" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-          <iconify-icon icon="ph:tiktok-logo-duotone"></iconify-icon>
-        </a>
-      </nav>
-
-      <div class="links-list">
-        <a class="lt-card lt-card--feature"
-           href="https://www.instagram.com/sulutopi"
-           target="_blank" rel="noopener noreferrer">
-          <div class="lt-card__media">
-            <img src="images/logo_sulutopi.png" alt="">
-          </div>
-          <div class="lt-card__body">Çok Yakında — Sulutopi</div>
-        </a>
-
-        <a class="lt-card lt-card--stack"
-           href="https://ty.gl/5w7m624y44fco"
-           target="_blank" rel="noopener noreferrer">
-          <img class="lt-card__thumb" src="images/logo_sulutopi.png" alt="">
-          <div class="lt-card__body">Boyamaya Başla — Kalemleri Keşfet</div>
-        </a>
-
-        <a class="lt-card lt-card--stack" href="index.html">
-          <iconify-icon
-            icon="ph:storefront-duotone"
-            class="lt-card__thumb"
-            style="display:grid;place-items:center;font-size:1.6rem;color:var(--color-primary-deep);">
-          </iconify-icon>
-          <div class="lt-card__body">Ana Sayfa — Sulutopi</div>
-        </a>
-
-        <a class="lt-card lt-card--stack" href="mailto:info@sulutopi.com">
-          <iconify-icon
-            icon="ph:envelope-duotone"
-            class="lt-card__thumb"
-            style="display:grid;place-items:center;font-size:1.6rem;color:var(--color-primary-deep);">
-          </iconify-icon>
-          <div class="lt-card__body">Bize Ulaş — info@sulutopi.com</div>
-        </a>
+        <nav class="lt-socials" aria-label="Social media">
+          <a href="https://instagram.com/sulutopi"
+             target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <iconify-icon icon="ph:instagram-logo-duotone"></iconify-icon>
+          </a>
+          <a href="https://www.facebook.com/sulutopi"
+             target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <iconify-icon icon="ph:facebook-logo-duotone"></iconify-icon>
+          </a>
+          <a href="https://tiktok.com/@sulutopi"
+             target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <iconify-icon icon="ph:tiktok-logo-duotone"></iconify-icon>
+          </a>
+          <a href="mailto:info@sulutopi.com" aria-label="Email">
+            <iconify-icon icon="ph:envelope-duotone"></iconify-icon>
+          </a>
+        </nav>
       </div>
 
-      <footer class="links-footer">
-        © <span id="year"></span> Sulutopi · Made with love for little artists.
+      <!-- Links -->
+      <div class="lt-links">
+
+        <a class="lt-link lt-link--feature lt-reveal"
+           style="animation-delay: 0.15s;"
+           href="https://www.instagram.com/sulutopi"
+           target="_blank" rel="noopener noreferrer">
+          <span class="lt-badge">Çok Yakında</span>
+          <div class="lt-link__banner">
+            <img src="images/logo_sulutopi.png" alt="Sulutopi launch teaser">
+          </div>
+          <div class="lt-link__chin">Çok Yakında — Sulutopi</div>
+        </a>
+
+        <a class="lt-link lt-link--stack lt-reveal"
+           style="animation-delay: 0.22s;"
+           href="https://ty.gl/5w7m624y44fco"
+           target="_blank" rel="noopener noreferrer">
+          <span class="lt-link__thumb">
+            <img src="images/trendyol.png" alt="Trendyol">
+          </span>
+          <span class="lt-link__title">Boyamaya Başla — Kalemleri Keşfet</span>
+        </a>
+
+        <a class="lt-link lt-link--stack lt-reveal"
+           style="animation-delay: 0.28s;"
+           href="index.html">
+          <span class="lt-link__thumb">
+            <iconify-icon icon="ph:storefront-duotone"></iconify-icon>
+          </span>
+          <span class="lt-link__title">Ana Sayfa — Sulutopi</span>
+        </a>
+
+        <a class="lt-link lt-link--stack lt-reveal"
+           style="animation-delay: 0.34s;"
+           href="https://www.instagram.com/sulutopi"
+           target="_blank" rel="noopener noreferrer">
+          <span class="lt-link__thumb">
+            <iconify-icon icon="ph:instagram-logo-duotone"></iconify-icon>
+          </span>
+          <span class="lt-link__title">Instagram'da Takip Et</span>
+        </a>
+
+        <a class="lt-link lt-link--stack lt-reveal"
+           style="animation-delay: 0.40s;"
+           href="https://tiktok.com/@sulutopi"
+           target="_blank" rel="noopener noreferrer">
+          <span class="lt-link__thumb">
+            <iconify-icon icon="ph:tiktok-logo-duotone"></iconify-icon>
+          </span>
+          <span class="lt-link__title">TikTok'ta İzle</span>
+        </a>
+
+        <a class="lt-link lt-link--stack lt-reveal"
+           style="animation-delay: 0.46s;"
+           href="mailto:info@sulutopi.com">
+          <span class="lt-link__thumb">
+            <iconify-icon icon="ph:envelope-duotone"></iconify-icon>
+          </span>
+          <span class="lt-link__title">Bize Ulaş — info@sulutopi.com</span>
+        </a>
+
+      </div>
+
+      <footer class="lt-footer lt-reveal" style="animation-delay: 0.55s;">
+        <span class="lt-mark">
+          <iconify-icon icon="ph:heart-fill" style="color: var(--color-primary);">
+          </iconify-icon>
+          Sulutopi
+        </span>
+        <br>
+        © <span id="year"></span> Sulutopi Studio · Made for little artists.
       </footer>
+
     </section>
   </main>
 
+  <div class="lt-toast" id="toast" role="status" aria-live="polite">
+    Link copied
+  </div>
+
   <script>
+    'use strict';
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const shareBtn = document.getElementById('shareBtn');
+    const toast = document.getElementById('toast');
+    if (shareBtn) {
+      shareBtn.addEventListener('click', async () => {
+        const url = window.location.href;
+        const data = { title: 'Sulutopi', url };
+        try {
+          if (navigator.share) {
+            await navigator.share(data);
+          } else {
+            await navigator.clipboard.writeText(url);
+            showToast('Link copied to clipboard');
+          }
+        } catch (_) {
+          // user cancelled or copy failed — silent
+        }
+      });
+    }
+
+    function showToast(message) {
+      if (!toast) return;
+      toast.textContent = message;
+      toast.classList.add('is-visible');
+      clearTimeout(showToast._t);
+      showToast._t = setTimeout(() => {
+        toast.classList.remove('is-visible');
+      }, 1800);
+    }
   </script>
 </body>
 </html>
