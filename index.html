@@ -1,631 +1,445 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SULUTOPI — premium watercolor activity sets for little artists. Crafted brushes, pure pigments, and joyful creativity in every box.">
-  <title>SULUTOPI — Premium Watercolor Activity Sets for Little Artists</title>
+  <meta name="description" content="Sulutopi — çocuklar için sulu boya masal setleri.
+    Hikâye kitabı, boyama kartları, su hazneli fırça ve boya paleti tek kutuda.
+    Hayal Et · Boya · Keşfet.">
+  <title>Sulutopi — Çocuklar için Sulu Boya Masal Setleri</title>
+
+  <link rel="icon" href="images/logo_sulutopi.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap"
+    rel="stylesheet">
 
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
-  <!-- ============ NAVBAR ============ -->
-  <header class="nav" id="nav">
+  <!-- ============ ÜST MENÜ ============ -->
+  <header class="nav">
     <div class="container nav__inner">
-      <a href="#top" class="nav__logo" aria-label="Sulutopi home">
-        <img class="nav__logo-img" src="images/logo_sulutopi.png" alt="Sulutopi">
-        <span class="nav__logo-text">SULUTOPI</span>
+      <a href="#top" class="nav__logo" aria-label="Sulutopi ana sayfa">
+        <img class="nav__logo-img" src="images/logo_sulutopi.png" alt="Sulutopi logosu">
+        <span class="nav__logo-text rainbow" aria-hidden="true">
+          <span>S</span><span>U</span><span>L</span><span>U</span><span>T</span><span>O</span><span>P</span><span>İ</span>
+        </span>
       </a>
 
-      
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#craft">Craftsmanship</a>
-        <a href="#story">Story</a>
-        <a href="#sets">Sets</a>
-        <a href="#why">Why Us</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#faq">FAQ</a>
+      <nav class="nav__links" aria-label="Ana menü">
+        <a href="#setler">Setler</a>
+        <a href="#icindekiler">Kutuda Neler Var?</a>
+        <a href="#nasil">Nasıl Oynanır?</a>
+        <a href="links.html">Tüm Linkler</a>
       </nav>
 
-      <a href="#cta" class="btn btn--gold nav__cta">
-        <span>Shop Now</span>
-        <iconify-icon icon="ph:arrow-up-right-bold" aria-hidden="true"></iconify-icon>
+      <a href="#satin-al" class="btn btn--primary nav__cta">
+        <span>Satın Al</span>
+        <iconify-icon icon="ph:shopping-bag-duotone" aria-hidden="true"></iconify-icon>
       </a>
 
-      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <button class="nav__toggle" id="navToggle" aria-expanded="false"
+        aria-controls="navMenu" aria-label="Menüyü aç">
         <iconify-icon icon="ph:list-bold" aria-hidden="true"></iconify-icon>
       </button>
     </div>
+
+    <nav class="nav__menu container" id="navMenu" aria-label="Mobil menü">
+      <a href="#setler">Setler</a>
+      <a href="#icindekiler">Kutuda Neler Var?</a>
+      <a href="#nasil">Nasıl Oynanır?</a>
+      <a href="#satin-al">Satın Al</a>
+      <a href="links.html">Tüm Linkler</a>
+    </nav>
   </header>
 
   <main id="top">
 
-    <!-- ============ HERO ============ -->
+    <!-- ============ KAHRAMAN ============ -->
     <section class="hero">
-      <div class="hero__bg" aria-hidden="true">
-        <img
-          id="heroSequence"
-          src="hero/Watercolor_set_for_child_activity_202605241923_000.jpg"
-          alt=""
-          class="hero__bg-img"
-          loading="eager"
-          fetchpriority="high"
-          data-frame-base="hero/Watercolor_set_for_child_activity_202605241923_"
-          data-frame-ext=".jpg"
-          data-frame-count="80"
-          data-frame-pad="3"
-          data-frame-fps="12">
-        <div class="hero__gradient"></div>
-        <div class="hero__orb hero__orb--1"></div>
-        <div class="hero__orb hero__orb--2"></div>
-        <div class="hero__orb hero__orb--3"></div>
-      </div>
-
       <div class="container hero__inner">
-        <span class="eyebrow" data-reveal>
-          <iconify-icon icon="ph:sparkle-fill" aria-hidden="true"></iconify-icon>
-          100% Human-Crafted · Never AI
-        </span>
+        <div>
+          <span class="eyebrow" data-reveal>
+            <iconify-icon icon="ph:sparkle-fill" aria-hidden="true"></iconify-icon>
+            Hayal Et · Boya · Keşfet
+          </span>
 
-        <h1 class="hero__title" data-reveal>
-          Less Screen Time.<br>
-          More <span class="grad-text">Imagination.</span>
-        </h1>
+          <h1 class="hero__title" data-reveal>
+            Suyla canlanan<br>
+            <span class="grad">masal kutuları</span>
+          </h1>
 
-        <p class="hero__subtitle" data-reveal>
-          Watercolor cards illustrated by professional graphic designers,
-          paired with CE-certified paints, a refillable brush pen, and
-          a story book — built to pull little ones off the screen and into
-          a world of color.
-        </p>
+          <p class="hero__subtitle" data-reveal>
+            Her Sulutopi kutusunda bir hikâye kitabı, sulu boya kartları,
+            su hazneli fırça ve boya paleti var. Ekranı kapat, fırçayı
+            suyla doldur — masal başlasın!
+          </p>
 
-        <div class="hero__cta-row" data-reveal>
-          <a href="#sets" class="btn btn--gold btn--lg">
-            <span>Order the Set</span>
-            <iconify-icon icon="ph:arrow-right-bold" aria-hidden="true"></iconify-icon>
-          </a>
-          <a href="#story" class="btn btn--ghost btn--lg">
-            <iconify-icon icon="ph:play-circle-duotone" aria-hidden="true"></iconify-icon>
-            <span>Our Story</span>
-          </a>
+          <div class="hero__cta-row" data-reveal>
+            <a href="#setler" class="btn btn--primary">
+              <span>Setleri Keşfet</span>
+              <iconify-icon icon="ph:arrow-down-bold" aria-hidden="true"></iconify-icon>
+            </a>
+            <a href="#satin-al" class="btn btn--butter">
+              <iconify-icon icon="ph:shopping-bag-duotone" aria-hidden="true"></iconify-icon>
+              <span>Şimdi Satışta</span>
+            </a>
+          </div>
+
+          <p class="hero__note" data-reveal>
+            <iconify-icon icon="ph:paint-brush-duotone" aria-hidden="true"></iconify-icon>
+            Ekran süresine renkli bir mola
+          </p>
         </div>
 
-        <ul class="hero__trust" data-reveal>
-          <li>
-            <iconify-icon icon="ph:shield-check-duotone" aria-hidden="true"></iconify-icon>
-            CE-Certified Watercolors
-          </li>
-          <li>
-            <iconify-icon icon="ph:pencil-line-duotone" aria-hidden="true"></iconify-icon>
-            Designed by Real Illustrators
-          </li>
-          <li>
-            <iconify-icon icon="ph:heart-duotone" aria-hidden="true"></iconify-icon>
-            Made for Imagination
-          </li>
-        </ul>
-      </div>
+        <div class="hero__stack" data-reveal>
+          <span class="doodle doodle--1" aria-hidden="true"></span>
+          <span class="doodle doodle--2" aria-hidden="true"></span>
+          <span class="doodle doodle--3" aria-hidden="true"></span>
 
-      <div class="hero__scroll" aria-hidden="true">
-        <iconify-icon icon="ph:mouse-simple-duotone"></iconify-icon>
-        <span>Scroll</span>
+          <figure class="sticker sticker--tilt-left sticker--lumi">
+            <img src="images/products/lumi-kutu.jpg"
+              alt="Lumi'nin Işıltılı Bale Hayali seti — pembe kutu">
+            <figcaption class="sticker__label">Lumi 🩰</figcaption>
+          </figure>
+
+          <figure class="sticker sticker--tilt-right sticker--lino">
+            <img src="images/products/lino-kutu.jpg"
+              alt="Lino'nun Renkli Uzay Yolculuğu seti — lila kutu">
+            <figcaption class="sticker__label">Lino 🚀</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
-    <!-- ============ MARQUEE ============ -->
+    <!-- ============ KAYAN BANT ============ -->
     <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>Crafted in Small Batches</span><iconify-icon icon="ph:flower-duotone"></iconify-icon>
-        <span>Non-Toxic Pigments</span><iconify-icon icon="ph:flower-duotone"></iconify-icon>
-        <span>Heavyweight Cold-Press Paper</span><iconify-icon icon="ph:flower-duotone"></iconify-icon>
-        <span>Loved by 12,000+ Families</span><iconify-icon icon="ph:flower-duotone"></iconify-icon>
-        <span>Hand-Poured Pans</span><iconify-icon icon="ph:flower-duotone"></iconify-icon>
-        <span>Free Shipping Over $40</span><iconify-icon icon="ph:flower-duotone"></iconify-icon>
-        <!-- duplicate for seamless loop -->
-        <span>Crafted in Small Batches</span><iconify-icon icon="ph:flower-duotone"></iconify-icon>
-        <span>Non-Toxic Pigments</span><iconify-icon icon="ph:flower-duotone"></iconify-icon>
-        <span>Heavyweight Cold-Press Paper</span><iconify-icon icon="ph:flower-duotone"></iconify-icon>
-        <span>Loved by 12,000+ Families</span><iconify-icon icon="ph:flower-duotone"></iconify-icon>
-        <span>Hand-Poured Pans</span><iconify-icon icon="ph:flower-duotone"></iconify-icon>
-        <span>Free Shipping Over $40</span><iconify-icon icon="ph:flower-duotone"></iconify-icon>
+      <div class="marquee__track" id="marqueeTrack">
+        <span>
+          ✦ HAYAL ET ✦ BOYA ✦ KEŞFET ✦ SULUTOPİ ✦ HAYAL ET ✦ BOYA ✦ KEŞFET ✦ SULUTOPİ
+        </span>
+        <span>
+          ✦ HAYAL ET ✦ BOYA ✦ KEŞFET ✦ SULUTOPİ ✦ HAYAL ET ✦ BOYA ✦ KEŞFET ✦ SULUTOPİ
+        </span>
       </div>
     </div>
 
-    <!-- ============ FEATURES / CRAFTSMANSHIP ============ -->
-    <section class="section" id="craft">
+    <!-- ============ SETLER ============ -->
+    <section class="products" id="setler">
       <div class="container">
-        <div class="section__head" data-reveal>
-          <span class="eyebrow eyebrow--center">
-            <iconify-icon icon="ph:hand-heart-duotone"></iconify-icon>
-            What's in the Box
+        <header class="section-head" data-reveal>
+          <span class="eyebrow">
+            <iconify-icon icon="ph:package-duotone" aria-hidden="true"></iconify-icon>
+            Sulutopi Setleri
           </span>
-          <h2 class="section__title">Made by Humans. <span class="grad-text">Loved by Kids.</span></h2>
-          <p class="section__lead">
-            Every set is built around one promise — to spark imagination away from
-            the screen. Designer-illustrated cards, certified paints, a refillable
-            brush, and a story book to bring it all to life.
+          <h2>İki kutu, iki <span class="squiggle">masal</span></h2>
+          <p>
+            Her set kendi kahramanı, kendi hikâyesi ve kendi renkleriyle geliyor.
+            Hangisi senin masalın?
           </p>
-        </div>
+        </header>
 
-        <div class="grid grid--4">
-          <article class="feature" data-reveal>
-            <div class="feature__icon">
-              <iconify-icon icon="ph:pencil-line-duotone"></iconify-icon>
-            </div>
-            <h3>Designer-Drawn Cards</h3>
-            <p>Each watercolor card is hand-illustrated by professional graphic designers — never generated by AI, ever.</p>
-          </article>
-
-          <article class="feature" data-reveal>
-            <div class="feature__icon">
-              <iconify-icon icon="ph:drop-half-bottom-duotone"></iconify-icon>
-            </div>
-            <h3>CE-Certified Paints</h3>
-            <p>Vivid, kid-safe watercolors certified to European CE standards. Rich pigments, washable, gentle on tiny hands.</p>
-          </article>
-
-          <article class="feature" data-reveal>
-            <div class="feature__icon">
-              <iconify-icon icon="ph:paint-brush-broad-duotone"></iconify-icon>
-            </div>
-            <h3>Refillable Brush Pen</h3>
-            <p>A reusable water-filled brush pen built to last — just twist, paint, and refill. No spills, no mess.</p>
-          </article>
-
-          <article class="feature" data-reveal>
-            <div class="feature__icon">
-              <iconify-icon icon="ph:book-open-duotone"></iconify-icon>
-            </div>
-            <h3>Bedtime Story Book</h3>
-            <p>An illustrated story book that brings the cards to life — every painting becomes a chapter of their own world.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ STORY ============ -->
-    <section class="section section--story" id="story">
-      <div class="container grid grid--story">
-        <div class="story__media" data-reveal>
-          <img
-            src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1200&q=80"
-            alt="A child painting with watercolors at a sunlit table"
-            loading="lazy">
-          <div class="story__badge">
-            <iconify-icon icon="ph:medal-duotone" aria-hidden="true"></iconify-icon>
-            <div>
-              <strong>Est. 2019</strong>
-              <span>Family-owned studio</span>
+        <!-- Lumi -->
+        <article class="product product--lumi" data-reveal>
+          <div>
+            <span class="product__badge">
+              <iconify-icon icon="ph:sparkle-fill" aria-hidden="true"></iconify-icon>
+              Şimdi Satışta
+            </span>
+            <h3 class="product__title">Lumi'nin Işıltılı Bale Hayali</h3>
+            <p class="product__desc">
+              Lumi her gece rüyasında sahnede süzülüyor. Işıltılı bale
+              kartlarını suyla boya, Lumi'nin hayaline sen de katıl!
+            </p>
+            <ul class="product__list">
+              <li>
+                <iconify-icon icon="ph:book-open-text-duotone" aria-hidden="true"></iconify-icon>
+                Resimli hikâye kitabı
+              </li>
+              <li>
+                <iconify-icon icon="ph:cards-duotone" aria-hidden="true"></iconify-icon>
+                Sulu boya boyama kartları
+              </li>
+              <li>
+                <iconify-icon icon="ph:paint-brush-duotone" aria-hidden="true"></iconify-icon>
+                Su hazneli fırça + sünger + 6 renk palet
+              </li>
+            </ul>
+            <div class="product__cta-row">
+              <a class="btn btn--primary" href="https://ty.gl/5w7m624y44fco"
+                target="_blank" rel="noopener noreferrer">
+                <span>Trendyol'da İncele</span>
+                <iconify-icon icon="ph:arrow-up-right-bold" aria-hidden="true"></iconify-icon>
+              </a>
+              <a class="btn" href="#satin-al">Tüm Mağazalar</a>
             </div>
           </div>
-        </div>
 
-        <div class="story__copy" data-reveal>
+          <div class="product__gallery">
+            <figure class="sticker">
+              <img src="images/products/lumi-kutu-ust.jpg"
+                alt="Lumi seti kutusunun içi — kartlar, fırça, sünger ve boya paleti">
+            </figure>
+            <figure class="sticker">
+              <img src="images/products/lumi-icerik.jpg"
+                alt="Lumi setinin içindekiler — kitap, kartlar, fırça ve palet">
+            </figure>
+            <figure class="sticker">
+              <img src="images/products/lumi-kartlar.jpg"
+                alt="Lumi boyama kartları ve su hazneli fırça">
+            </figure>
+          </div>
+        </article>
+
+        <!-- Lino -->
+        <article class="product product--lino" data-reveal>
+          <div>
+            <span class="product__badge">
+              <iconify-icon icon="ph:rocket-launch-duotone" aria-hidden="true"></iconify-icon>
+              Şimdi Satışta
+            </span>
+            <h3 class="product__title">Lino'nun Renkli Uzay Yolculuğu</h3>
+            <p class="product__desc">
+              Lino penceresinden yıldızları izliyor ve renkli bir uzay
+              yolculuğunun hayalini kuruyor. Gezegenleri suyla boya,
+              takımyıldızları keşfet!
+            </p>
+            <ul class="product__list">
+              <li>
+                <iconify-icon icon="ph:book-open-text-duotone" aria-hidden="true"></iconify-icon>
+                Resimli hikâye kitabı
+              </li>
+              <li>
+                <iconify-icon icon="ph:cards-duotone" aria-hidden="true"></iconify-icon>
+                Sulu boya boyama kartları
+              </li>
+              <li>
+                <iconify-icon icon="ph:paint-brush-duotone" aria-hidden="true"></iconify-icon>
+                Su hazneli fırça + sünger + 6 renk palet
+              </li>
+            </ul>
+            <div class="product__cta-row">
+              <a class="btn btn--primary" href="https://ty.gl/5w7m624y44fco"
+                target="_blank" rel="noopener noreferrer">
+                <span>Trendyol'da İncele</span>
+                <iconify-icon icon="ph:arrow-up-right-bold" aria-hidden="true"></iconify-icon>
+              </a>
+              <a class="btn" href="#satin-al">Tüm Mağazalar</a>
+            </div>
+          </div>
+
+          <div class="product__gallery">
+            <figure class="sticker">
+              <img src="images/products/lino-kutu-acili.jpg"
+                alt="Lino seti kutusunun içi — kartlar, fırça, sünger ve boya paleti">
+            </figure>
+            <figure class="sticker">
+              <img src="images/products/lino-icerik.jpg"
+                alt="Lino setinin içindekiler — kartlar, fırça, sünger ve palet">
+            </figure>
+            <figure class="sticker">
+              <img src="images/products/lino-kartlar.jpg"
+                alt="Lino boyama kartları ve su hazneli fırça">
+            </figure>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ KUTUDA NELER VAR ============ -->
+    <section class="contents" id="icindekiler">
+      <div class="container">
+        <header class="section-head" data-reveal>
           <span class="eyebrow">
-            <iconify-icon icon="ph:book-open-duotone"></iconify-icon>
-            Our Story
+            <iconify-icon icon="ph:gift-duotone" aria-hidden="true"></iconify-icon>
+            Kutuyu Aç
           </span>
-          <h2 class="section__title">Off the Screen. <span class="grad-text">Into Their World.</span></h2>
-          <p>
-            Sulutopi exists for one simple reason — to gently pull children
-            away from screens and back into the magic of color, story, and
-            imagination.
-          </p>
-          <p>
-            Every watercolor card is illustrated by a professional graphic
-            designer. Nothing is AI-generated. Ever. We pair those cards with
-            CE-certified paints, a refillable brush pen, and a story book —
-            because creativity deserves real materials.
-          </p>
-          <a href="#sets" class="btn btn--ghost">
-            <span>Explore the Collection</span>
-            <iconify-icon icon="ph:arrow-right-bold"></iconify-icon>
+          <h2>Kutuda neler var?</h2>
+        </header>
+
+        <div class="contents__grid" data-reveal>
+          <div class="content-card">
+            <iconify-icon icon="ph:book-open-text-duotone" aria-hidden="true"></iconify-icon>
+            <h3>Hikâye Kitabı</h3>
+            <p>Kahramanının masalı</p>
+          </div>
+          <div class="content-card">
+            <iconify-icon icon="ph:cards-duotone" aria-hidden="true"></iconify-icon>
+            <h3>Boyama Kartları</h3>
+            <p>Sulu boya kâğıdında</p>
+          </div>
+          <div class="content-card">
+            <iconify-icon icon="ph:pen-nib-duotone" aria-hidden="true"></iconify-icon>
+            <h3>Su Hazneli Fırça</h3>
+            <p>Doldur ve boya</p>
+          </div>
+          <div class="content-card">
+            <iconify-icon icon="ph:palette-duotone" aria-hidden="true"></iconify-icon>
+            <h3>6 Renk Palet</h3>
+            <p>Canlı sulu boyalar</p>
+          </div>
+          <div class="content-card">
+            <iconify-icon icon="ph:drop-duotone" aria-hidden="true"></iconify-icon>
+            <h3>Sünger</h3>
+            <p>Fırçanı temizle</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NASIL OYNANIR ============ -->
+    <section class="steps" id="nasil">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="eyebrow">
+            <iconify-icon icon="ph:magic-wand-duotone" aria-hidden="true"></iconify-icon>
+            Çok Kolay
+          </span>
+          <h2>Nasıl oynanır?</h2>
+        </header>
+
+        <div class="steps__grid">
+          <div class="step" data-reveal>
+            <span class="step__num">1</span>
+            <h3>Hikâyeyi oku</h3>
+            <p>Kahramanının masalını keşfet, hayal gücünü ısıt.</p>
+          </div>
+          <div class="step" data-reveal>
+            <span class="step__num">2</span>
+            <h3>Fırçayı suyla doldur</h3>
+            <p>Su hazneli fırçayı doldur, paletten rengini seç.</p>
+          </div>
+          <div class="step" data-reveal>
+            <span class="step__num">3</span>
+            <h3>Boya ve keşfet</h3>
+            <p>Kartları boya, masalın renklerle canlansın!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SATIN AL ============ -->
+    <section class="stores" id="satin-al">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="eyebrow">
+            <iconify-icon icon="ph:shopping-bag-duotone" aria-hidden="true"></iconify-icon>
+            Şimdi Satışta
+          </span>
+          <h2>Nereden <span class="squiggle">alabilirim?</span></h2>
+          <p>Sulutopi setleri sevdiğin mağazalarda seni bekliyor.</p>
+        </header>
+
+        <div class="stores__grid" data-reveal>
+          <a class="store-card store-card--trendyol" href="https://ty.gl/5w7m624y44fco"
+            target="_blank" rel="noopener noreferrer">
+            <span class="store-card__icon">
+              <img src="images/trendyol.png" alt="Trendyol logosu">
+            </span>
+            <span>
+              <h3>Trendyol</h3>
+              <p>Sulutopi mağazası</p>
+            </span>
+            <iconify-icon class="store-card__arrow" icon="ph:arrow-right-bold"
+              aria-hidden="true"></iconify-icon>
+          </a>
+
+          <a class="store-card store-card--hepsiburada"
+            href="https://www.hepsiburada.com/magaza/sulutopi-kids"
+            target="_blank" rel="noopener noreferrer">
+            <span class="store-card__icon">
+              <iconify-icon icon="ph:shopping-cart-duotone" aria-hidden="true"></iconify-icon>
+            </span>
+            <span>
+              <h3>Hepsiburada</h3>
+              <p>Sulutopi Kids mağazası</p>
+            </span>
+            <iconify-icon class="store-card__arrow" icon="ph:arrow-right-bold"
+              aria-hidden="true"></iconify-icon>
+          </a>
+
+          <a class="store-card store-card--shopier"
+            href="https://www.shopier.com/sulutopikids"
+            target="_blank" rel="noopener noreferrer">
+            <span class="store-card__icon">
+              <iconify-icon icon="ph:storefront-duotone" aria-hidden="true"></iconify-icon>
+            </span>
+            <span>
+              <h3>Shopier</h3>
+              <p>Sulutopi Kids mağazası</p>
+            </span>
+            <iconify-icon class="store-card__arrow" icon="ph:arrow-right-bold"
+              aria-hidden="true"></iconify-icon>
           </a>
         </div>
       </div>
     </section>
-
-    <!-- ============ SETS / PRODUCTS ============ -->
-    <section class="section" id="sets">
-      <div class="container">
-        <div class="section__head" data-reveal>
-          <span class="eyebrow eyebrow--center">
-            <iconify-icon icon="ph:palette-duotone"></iconify-icon>
-            The Collection
-          </span>
-          <h2 class="section__title">Activity Sets <span class="grad-text">They'll Treasure.</span></h2>
-          <p class="section__lead">
-            Three signature kits — each a complete world of color, ready to open and explore.
-            Prefer to pick à la carte? Our cards, paints, and brush pens are also sold separately.
-          </p>
-        </div>
-
-        <div class="grid grid--3">
-          <article class="card" data-reveal>
-            <div class="card__media">
-              <img
-                src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=80"
-                alt="The Little Explorer watercolor set with pans and brush"
-                loading="lazy">
-              <span class="card__tag">Bestseller</span>
-            </div>
-            <div class="card__body">
-              <h3>The Little Explorer</h3>
-              <p>12 pure pigment pans, 2 taklon brushes, 15 sheets of cold-press paper. Ages 4+.</p>
-              <div class="card__foot">
-                <span class="price">$38</span>
-                <a href="#cta" class="btn btn--gold btn--sm">
-                  <span>Add to Cart</span>
-                  <iconify-icon icon="ph:shopping-bag-duotone"></iconify-icon>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card card--featured" data-reveal>
-            <div class="card__media">
-              <img
-                src="https://images.unsplash.com/photo-1456086272160-b28b0645b729?auto=format&fit=crop&w=900&q=80"
-                alt="The Dreamer Deluxe watercolor activity set"
-                loading="lazy">
-              <span class="card__tag card__tag--gold">Limited Edition</span>
-            </div>
-            <div class="card__body">
-              <h3>The Dreamer Deluxe</h3>
-              <p>24 artisan pigments, 4 premium brushes, 20 heavyweight sheets, sketch guide. Ages 6+.</p>
-              <div class="card__foot">
-                <span class="price">$62</span>
-                <a href="#cta" class="btn btn--gold btn--sm">
-                  <span>Add to Cart</span>
-                  <iconify-icon icon="ph:shopping-bag-duotone"></iconify-icon>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card" data-reveal>
-            <div class="card__media">
-              <img
-                src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=900&q=80"
-                alt="The Studio watercolor master kit"
-                loading="lazy">
-              <span class="card__tag">New</span>
-            </div>
-            <div class="card__body">
-              <h3>The Young Studio</h3>
-              <p>36 pigments, 6 sable-style brushes, 30 sheets, palette, and travel case. Ages 8+.</p>
-              <div class="card__foot">
-                <span class="price">$94</span>
-                <a href="#cta" class="btn btn--gold btn--sm">
-                  <span>Add to Cart</span>
-                  <iconify-icon icon="ph:shopping-bag-duotone"></iconify-icon>
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ WHY CHOOSE US ============ -->
-    <section class="section section--why" id="why">
-      <div class="container grid grid--why">
-        <div data-reveal>
-          <span class="eyebrow">
-            <iconify-icon icon="ph:star-duotone"></iconify-icon>
-            Why Sulutopi
-          </span>
-          <h2 class="section__title">Built Different. <span class="grad-text">On Purpose.</span></h2>
-          <p class="section__lead">
-            Mass-market kits don't last a weekend. Ours become heirlooms — the set
-            your child reaches for again and again.
-          </p>
-        </div>
-
-        <ul class="why__list">
-          <li data-reveal>
-            <iconify-icon icon="ph:robot-duotone"></iconify-icon>
-            <div>
-              <h4>Zero AI, 100% Human</h4>
-              <p>Every card is illustrated by professional graphic designers. Real artists, real craft.</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <iconify-icon icon="ph:shield-check-duotone"></iconify-icon>
-            <div>
-              <h4>CE-Certified & Kid-Safe</h4>
-              <p>Watercolors tested and certified to European safety standards. Gentle, washable, worry-free.</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <iconify-icon icon="ph:device-mobile-slash-duotone"></iconify-icon>
-            <div>
-              <h4>A Break from the Screen</h4>
-              <p>Designed to nudge kids away from devices and back into hands-on, imaginative play.</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <iconify-icon icon="ph:seal-check-duotone"></iconify-icon>
-            <div>
-              <h4>30-Day Joy Guarantee</h4>
-              <p>If it doesn't spark a smile, send it back. Full refund, no questions.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============ STATS / SOCIAL PROOF ============ -->
-    <section class="section section--stats">
-      <div class="container">
-        <ul class="stats">
-          <li data-reveal>
-            <strong data-count="12000">0</strong>
-            <span>Happy Families</span>
-          </li>
-          <li data-reveal>
-            <strong data-count="4.9" data-decimals="1">0</strong>
-            <span>Avg. Star Rating</span>
-          </li>
-          <li data-reveal>
-            <strong data-count="6">0</strong>
-            <span>Years of Craft</span>
-          </li>
-          <li data-reveal>
-            <strong data-count="100" data-suffix="%">0</strong>
-            <span>Non-Toxic Promise</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============ TESTIMONIALS ============ -->
-    <section class="section" id="reviews">
-      <div class="container">
-        <div class="section__head" data-reveal>
-          <span class="eyebrow eyebrow--center">
-            <iconify-icon icon="ph:chat-circle-heart-duotone"></iconify-icon>
-            Loved by Parents
-          </span>
-          <h2 class="section__title">Real Words from <span class="grad-text">Real Families.</span></h2>
-        </div>
-
-        <div class="grid grid--3">
-          <figure class="quote" data-reveal>
-            <div class="quote__stars" aria-label="5 out of 5 stars">
-              <iconify-icon icon="ph:star-fill"></iconify-icon>
-              <iconify-icon icon="ph:star-fill"></iconify-icon>
-              <iconify-icon icon="ph:star-fill"></iconify-icon>
-              <iconify-icon icon="ph:star-fill"></iconify-icon>
-              <iconify-icon icon="ph:star-fill"></iconify-icon>
-            </div>
-            <blockquote>
-              "The colors are unreal. My daughter hasn't put the brushes down all week —
-              the box itself feels like a gift you'd never throw away."
-            </blockquote>
-            <figcaption>
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="" loading="lazy">
-              <div><strong>Amelia R.</strong><span>Mum of two · Verified</span></div>
-            </figcaption>
-          </figure>
-
-          <figure class="quote" data-reveal>
-            <div class="quote__stars" aria-label="5 out of 5 stars">
-              <iconify-icon icon="ph:star-fill"></iconify-icon>
-              <iconify-icon icon="ph:star-fill"></iconify-icon>
-              <iconify-icon icon="ph:star-fill"></iconify-icon>
-              <iconify-icon icon="ph:star-fill"></iconify-icon>
-              <iconify-icon icon="ph:star-fill"></iconify-icon>
-            </div>
-            <blockquote>
-              "Finally, a kids' art set that doesn't look like a toy. Beautiful object,
-              brilliant pigments. Our go-to birthday gift now."
-            </blockquote>
-            <figcaption>
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="" loading="lazy">
-              <div><strong>James K.</strong><span>Dad · Verified</span></div>
-            </figcaption>
-          </figure>
-
-          <figure class="quote" data-reveal>
-            <div class="quote__stars" aria-label="5 out of 5 stars">
-              <iconify-icon icon="ph:star-fill"></iconify-icon>
-              <iconify-icon icon="ph:star-fill"></iconify-icon>
-              <iconify-icon icon="ph:star-fill"></iconify-icon>
-              <iconify-icon icon="ph:star-fill"></iconify-icon>
-              <iconify-icon icon="ph:star-fill"></iconify-icon>
-            </div>
-            <blockquote>
-              "The paper alone is worth it. No bleed, no warping. My son's first 'real'
-              art kit, and you can feel the quality."
-            </blockquote>
-            <figcaption>
-              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=120&q=80" alt="" loading="lazy">
-              <div><strong>Priya S.</strong><span>Mum · Verified</span></div>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ FAQ ============ -->
-    <section class="section" id="faq">
-      <div class="container faq__wrap">
-        <div class="section__head" data-reveal>
-          <span class="eyebrow eyebrow--center">
-            <iconify-icon icon="ph:question-duotone"></iconify-icon>
-            Curious Minds
-          </span>
-          <h2 class="section__title">Questions, <span class="grad-text">Answered.</span></h2>
-        </div>
-
-        <div class="faq" data-reveal>
-          <details class="faq__item">
-            <summary>
-              <span>Are your cards made with AI?</span>
-              <iconify-icon icon="ph:plus-bold" class="faq__icon"></iconify-icon>
-            </summary>
-            <div class="faq__body">
-              <p>Absolutely not. Every single Sulutopi card is illustrated by professional human graphic designers. We believe children deserve real art, made by real artists.</p>
-            </div>
-          </details>
-
-          <details class="faq__item">
-            <summary>
-              <span>Are the watercolor paints safe for kids?</span>
-              <iconify-icon icon="ph:plus-bold" class="faq__icon"></iconify-icon>
-            </summary>
-            <div class="faq__body">
-              <p>Yes. Our paints are CE-certified to European safety standards — non-toxic, washable, and gentle on sensitive skin and clothes.</p>
-            </div>
-          </details>
-
-          <details class="faq__item">
-            <summary>
-              <span>Can I buy cards, paints, or brush pens separately?</span>
-              <iconify-icon icon="ph:plus-bold" class="faq__icon"></iconify-icon>
-            </summary>
-            <div class="faq__body">
-              <p>Yes — every component of our sets is also available individually. Restock just the cards, grab an extra refillable brush pen, or top up your paint pans whenever you need.</p>
-            </div>
-          </details>
-
-          <details class="faq__item">
-            <summary>
-              <span>Can you create custom card themes for us?</span>
-              <iconify-icon icon="ph:plus-bold" class="faq__icon"></iconify-icon>
-            </summary>
-            <div class="faq__body">
-              <p>We love custom commissions. Reach out at <a href="mailto:info@sulutopi.com">info@sulutopi.com</a> with your idea — birthdays, schools, brand collaborations — and our designers will craft a one-of-a-kind set just for you.</p>
-            </div>
-          </details>
-
-          <details class="faq__item">
-            <summary>
-              <span>What ages is Sulutopi for?</span>
-              <iconify-icon icon="ph:plus-bold" class="faq__icon"></iconify-icon>
-            </summary>
-            <div class="faq__body">
-              <p>Our sets are designed for ages 4 and up, with three tiers — Little Explorer (4+), Dreamer Deluxe (6+), and Young Studio (8+) — each scaled to suit growing skills.</p>
-            </div>
-          </details>
-
-          <details class="faq__item">
-            <summary>
-              <span>What's your return policy?</span>
-              <iconify-icon icon="ph:plus-bold" class="faq__icon"></iconify-icon>
-            </summary>
-            <div class="faq__body">
-              <p>If your set doesn't spark joy within 30 days, return it for a full refund. No questions, no fuss. We stand behind every box.</p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CTA BANNER ============ -->
-    <section class="cta-banner" id="cta">
-      <div class="container cta-banner__inner">
-        <div class="cta-banner__orb cta-banner__orb--1" aria-hidden="true"></div>
-        <div class="cta-banner__orb cta-banner__orb--2" aria-hidden="true"></div>
-
-        <span class="eyebrow eyebrow--center" data-reveal>
-          <iconify-icon icon="ph:timer-duotone"></iconify-icon>
-          Limited Spring Batch — Today Only
-        </span>
-        <h2 class="cta-banner__title" data-reveal>
-          Give Them a Gift They'll<br>
-          <span class="grad-text">Remember Forever.</span>
-        </h2>
-        <p class="cta-banner__lead" data-reveal>
-          Free shipping, gift wrap included. Limited quantities — once they're gone, they're gone.
-        </p>
-        <a href="#sets" class="btn btn--gold btn--lg btn--glow" data-reveal>
-          <span>Claim Your Set</span>
-          <iconify-icon icon="ph:arrow-right-bold"></iconify-icon>
-        </a>
-      </div>
-    </section>
-
-    <!-- ============ CUSTOM THEMES / CONTACT ============ -->
-    <section class="section newsletter">
-      <div class="container newsletter__inner glass" data-reveal>
-        <div>
-          <span class="eyebrow">
-            <iconify-icon icon="ph:envelope-duotone"></iconify-icon>
-            Custom Themes
-          </span>
-          <h2 class="newsletter__title">Have a theme in mind? Let's paint it.</h2>
-          <p>
-            Birthdays, schools, brand collabs — if there's a card theme you'd
-            love, our designers will hand-illustrate it for you. Drop us a line.
-          </p>
-        </div>
-        <div class="newsletter__contact">
-          <a href="mailto:info@sulutopi.com" class="btn btn--gold btn--lg">
-            <iconify-icon icon="ph:envelope-simple-duotone"></iconify-icon>
-            <span>info@sulutopi.com</span>
-          </a>
-          <p class="newsletter__note">We reply to every message — usually within 24 hours.</p>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- ============ FOOTER ============ -->
+  <!-- ============ ALT BİLGİ ============ -->
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a href="#top" class="nav__logo">
-          <span class="nav__logo-mark">
-            <iconify-icon icon="ph:paint-brush-broad-duotone" aria-hidden="true"></iconify-icon>
-          </span>
-          <span class="nav__logo-text">SULUTOPI</span>
-        </a>
-        <p>Premium watercolor activity sets for little artists. Crafted in small batches, made to last.</p>
+        <span class="footer__logo rainbow" aria-label="Sulutopi">
+          <span>S</span><span>U</span><span>L</span><span>U</span><span>T</span><span>O</span><span>P</span><span>İ</span>
+        </span>
+        <p>
+          Çocuklar için sulu boya masal setleri.
+          Hayal Et · Boya · Keşfet.
+        </p>
       </div>
 
       <div class="footer__col">
-        <h4>Shop</h4>
-        <a href="#sets">All Sets</a>
-        <a href="#sets">Little Explorer</a>
-        <a href="#sets">Dreamer Deluxe</a>
-        <a href="#sets">Young Studio</a>
+        <h4>Setler</h4>
+        <a href="#setler">Lumi — Bale Hayali</a>
+        <a href="#setler">Lino — Uzay Yolculuğu</a>
+        <a href="#icindekiler">Kutuda Neler Var?</a>
       </div>
 
       <div class="footer__col">
-        <h4>Company</h4>
-        <a href="#story">Our Story</a>
-        <a href="#craft">Craftsmanship</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#faq">FAQ</a>
+        <h4>Mağazalar</h4>
+        <a href="https://ty.gl/5w7m624y44fco"
+          target="_blank" rel="noopener noreferrer">Trendyol</a>
+        <a href="https://www.hepsiburada.com/magaza/sulutopi-kids"
+          target="_blank" rel="noopener noreferrer">Hepsiburada</a>
+        <a href="https://www.shopier.com/sulutopikids"
+          target="_blank" rel="noopener noreferrer">Shopier</a>
       </div>
 
       <div class="footer__col">
-        <h4>Follow</h4>
+        <h4>Bizi Takip Et</h4>
         <div class="footer__social">
-          <a href="#" aria-label="Instagram"><iconify-icon icon="ph:instagram-logo-duotone"></iconify-icon></a>
-          <a href="#" aria-label="TikTok"><iconify-icon icon="ph:tiktok-logo-duotone"></iconify-icon></a>
-          <a href="#" aria-label="Pinterest"><iconify-icon icon="ph:pinterest-logo-duotone"></iconify-icon></a>
-          <a href="#" aria-label="YouTube"><iconify-icon icon="ph:youtube-logo-duotone"></iconify-icon></a>
+          <a href="https://instagram.com/sulutopi" target="_blank"
+            rel="noopener noreferrer" aria-label="Instagram">
+            <iconify-icon icon="ph:instagram-logo-duotone"></iconify-icon>
+          </a>
+          <a href="https://tiktok.com/@sulutopi" target="_blank"
+            rel="noopener noreferrer" aria-label="TikTok">
+            <iconify-icon icon="ph:tiktok-logo-duotone"></iconify-icon>
+          </a>
+          <a href="https://www.facebook.com/sulutopi" target="_blank"
+            rel="noopener noreferrer" aria-label="Facebook">
+            <iconify-icon icon="ph:facebook-logo-duotone"></iconify-icon>
+          </a>
+          <a href="mailto:info@sulutopi.com" aria-label="E-posta">
+            <iconify-icon icon="ph:envelope-duotone"></iconify-icon>
+          </a>
         </div>
       </div>
     </div>
 
     <div class="footer__bottom container">
-      <span>© <span id="year"></span> Sulutopi Studio. All rights reserved.</span>
-      <span>Made with <iconify-icon icon="ph:heart-fill" style="color:var(--color-gold);"></iconify-icon> for little artists.</span>
+      <span>© <span id="year"></span> Sulutopi. Tüm hakları saklıdır.</span>
+      <span>Küçük sanatçılar için sevgiyle 🎨</span>
     </div>
   </footer>
 
-  <!-- GSAP -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-
-  <script src="js/main.js" defer></script>
+  <script src="js/home.js" defer></script>
 </body>
 </html>
