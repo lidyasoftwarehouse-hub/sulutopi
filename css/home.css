@@ -517,6 +517,114 @@ stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
   }
 }
 
+/* ---------- Boyayan maskot animasyonu ---------- */
+.hero-paint {
+  max-width: 440px;
+  margin-top: var(--space-4);
+}
+
+.hero-paint svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.paint-eye {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.paint-brush {
+  offset-path: path('M118 98 Q170 48 232 88 Q294 126 348 84 Q382 58 416 74');
+  offset-rotate: 0deg;
+}
+
+/* offset-path desteklenmiyorsa fırçayı gizle, çizgi sabit kalsın */
+@supports not (offset-path: path('M0 0 L1 1')) {
+  .paint-brush {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .paint-mascot {
+    animation: mascot-bob 4s ease-in-out infinite;
+  }
+
+  .paint-eye {
+    animation: mascot-blink 4s linear infinite;
+  }
+
+  .paint-stroke {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: paint-draw 5.5s ease-in-out infinite;
+  }
+
+  .paint-brush {
+    animation: brush-move 5.5s ease-in-out infinite;
+  }
+
+  @keyframes mascot-bob {
+    0%,
+    100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  @keyframes mascot-blink {
+    0%,
+    91%,
+    100% { transform: scaleY(1); }
+    94% { transform: scaleY(0.12); }
+  }
+
+  @keyframes paint-draw {
+    0% {
+      stroke-dashoffset: 100;
+      opacity: 1;
+    }
+    55% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+    82% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+    94% {
+      stroke-dashoffset: 0;
+      opacity: 0;
+    }
+    100% {
+      stroke-dashoffset: 100;
+      opacity: 0;
+    }
+  }
+
+  @keyframes brush-move {
+    0% {
+      offset-distance: 0%;
+      opacity: 1;
+    }
+    55% {
+      offset-distance: 100%;
+      opacity: 1;
+    }
+    64% {
+      offset-distance: 100%;
+      opacity: 0;
+    }
+    92% {
+      offset-distance: 0%;
+      opacity: 0;
+    }
+    100% {
+      offset-distance: 0%;
+      opacity: 1;
+    }
+  }
+}
+
 /* ---------- Kayan yazı bandı ---------- */
 .marquee {
   overflow: hidden;

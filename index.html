@@ -35,7 +35,7 @@
       <nav class="nav__links" aria-label="Ana menü">
         <a href="#setler">Setler</a>
         <a href="#icindekiler">Kutuda Neler Var?</a>
-        <a href="#nasil">Nasıl Oynanır?</a>
+        <a href="boya.html">Boyama Atölyesi</a>
         <a href="links.html">Tüm Linkler</a>
       </nav>
 
@@ -53,7 +53,7 @@
     <nav class="nav__menu container" id="navMenu" aria-label="Mobil menü">
       <a href="#setler">Setler</a>
       <a href="#icindekiler">Kutuda Neler Var?</a>
-      <a href="#nasil">Nasıl Oynanır?</a>
+      <a href="boya.html">Boyama Atölyesi</a>
       <a href="#satin-al">Satın Al</a>
       <a href="links.html">Tüm Linkler</a>
     </nav>
@@ -96,6 +96,51 @@
             <iconify-icon icon="ph:paint-brush-duotone" aria-hidden="true"></iconify-icon>
             Ekran süresine renkli bir mola
           </p>
+
+          <div class="hero-paint" data-reveal aria-hidden="true">
+            <svg viewBox="0 0 440 150" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="rainbow-stroke" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#ff6f61"/>
+                  <stop offset="0.28" stop-color="#ffcf5c"/>
+                  <stop offset="0.55" stop-color="#5ecfbc"/>
+                  <stop offset="0.78" stop-color="#7db9f7"/>
+                  <stop offset="1" stop-color="#a99ae0"/>
+                </linearGradient>
+              </defs>
+
+              <g class="paint-mascot">
+                <circle cx="55" cy="82" r="42" fill="#ffcf5c"
+                  stroke="#33261b" stroke-width="4"/>
+                <path d="M26 66 A36 36 0 0 1 84 56" fill="none" stroke="#ff6f61"
+                  stroke-width="11" stroke-linecap="round"/>
+                <path d="M32 104 A32 32 0 0 0 88 92" fill="none" stroke="#7db9f7"
+                  stroke-width="9" stroke-linecap="round"/>
+                <circle cx="38" cy="88" r="5" fill="#f48ca3" opacity="0.75"/>
+                <circle cx="76" cy="86" r="5" fill="#f48ca3" opacity="0.75"/>
+                <ellipse class="paint-eye" cx="45" cy="76" rx="4" ry="6" fill="#33261b"/>
+                <ellipse class="paint-eye" cx="68" cy="74" rx="4" ry="6" fill="#33261b"/>
+                <path d="M46 90 Q57 98 69 90" fill="none" stroke="#33261b"
+                  stroke-width="4" stroke-linecap="round"/>
+              </g>
+
+              <path class="paint-stroke" pathLength="100"
+                d="M118 98 Q170 48 232 88 Q294 126 348 84 Q382 58 416 74"
+                fill="none" stroke="url(#rainbow-stroke)" stroke-width="14"
+                stroke-linecap="round"/>
+
+              <g class="paint-brush">
+                <g transform="rotate(38)">
+                  <rect x="-6" y="-52" width="12" height="30" rx="6"
+                    fill="#f9a03f" stroke="#33261b" stroke-width="3"/>
+                  <rect x="-6" y="-22" width="12" height="9" rx="2"
+                    fill="#cfd6e4" stroke="#33261b" stroke-width="3"/>
+                  <path d="M-6 -13 L6 -13 L0 4 Z" fill="#5a4632"
+                    stroke="#33261b" stroke-width="3" stroke-linejoin="round"/>
+                </g>
+              </g>
+            </svg>
+          </div>
         </div>
 
         <div class="hero__stack" data-reveal>
@@ -217,11 +262,11 @@
               </li>
               <li>
                 <iconify-icon icon="ph:cards-duotone" aria-hidden="true"></iconify-icon>
-                Sulu boya boyama kartları
+                16 parça hikâye kartı
               </li>
               <li>
                 <iconify-icon icon="ph:paint-brush-duotone" aria-hidden="true"></iconify-icon>
-                Su hazneli fırça + sünger + 6 renk palet
+                Doldurulabilir su hazneli fırça + sünger + palet
               </li>
             </ul>
             <div class="product__cta-row">
@@ -400,6 +445,7 @@
         <a href="#setler">Lumi — Bale Hayali</a>
         <a href="#setler">Lino — Uzay Yolculuğu</a>
         <a href="#icindekiler">Kutuda Neler Var?</a>
+        <a href="boya.html">Boyama Atölyesi</a>
       </div>
 
       <div class="footer__col">

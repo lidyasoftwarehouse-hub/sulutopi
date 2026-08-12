@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sulutopi Boyama Atölyesi — çocuklar için ücretsiz
+    çevrimiçi boyama oyunu. Lumi ve Lino'yu dokunarak veya fırçayla boya,
+    resmini indir ya da yazdır!">
+  <title>Boyama Atölyesi — Sulutopi</title>
+
+  <link rel="icon" href="images/logo_sulutopi.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/boya.css">
+</head>
+<body>
+
+  <!-- ============ ÜST MENÜ ============ -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Sulutopi ana sayfa">
+        <img class="nav__logo-img" src="images/logo_sulutopi.png" alt="Sulutopi logosu">
+        <span class="nav__logo-text rainbow" aria-hidden="true">
+          <span>S</span><span>U</span><span>L</span><span>U</span><span>T</span><span>O</span><span>P</span><span>İ</span>
+        </span>
+      </a>
+
+      <nav class="nav__links" aria-label="Ana menü">
+        <a href="index.html#setler">Setler</a>
+        <a href="index.html#icindekiler">Kutuda Neler Var?</a>
+        <a href="links.html">Tüm Linkler</a>
+      </nav>
+
+      <a href="index.html#satin-al" class="btn btn--primary nav__cta">
+        <span>Satın Al</span>
+        <iconify-icon icon="ph:shopping-bag-duotone" aria-hidden="true"></iconify-icon>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-expanded="false"
+        aria-controls="navMenu" aria-label="Menüyü aç">
+        <iconify-icon icon="ph:list-bold" aria-hidden="true"></iconify-icon>
+      </button>
+    </div>
+
+    <nav class="nav__menu container" id="navMenu" aria-label="Mobil menü">
+      <a href="index.html#setler">Setler</a>
+      <a href="index.html#icindekiler">Kutuda Neler Var?</a>
+      <a href="index.html#satin-al">Satın Al</a>
+      <a href="links.html">Tüm Linkler</a>
+    </nav>
+  </header>
+
+  <main class="atelier">
+    <div class="container">
+
+      <header class="atelier__head">
+        <span class="eyebrow">
+          <iconify-icon icon="ph:palette-duotone" aria-hidden="true"></iconify-icon>
+          Ücretsiz Boyama Oyunu
+        </span>
+        <h1>Boyama <span class="squiggle">Atölyesi</span></h1>
+        <p>Bir çizim seç, rengini seç, boyamaya başla!</p>
+      </header>
+
+      <div class="picker" role="group" aria-label="Çizim seç">
+        <button class="picker__btn is-active" data-drawing="lumi" type="button">
+          🩰 Balerin Lumi
+        </button>
+        <button class="picker__btn" data-drawing="lino" type="button">
+          🚀 Astronot Lino
+        </button>
+      </div>
+
+      <div class="atelier__grid">
+        <div class="board is-fill" id="board" aria-label="Boyama alanı"></div>
+
+        <div class="controls">
+          <div class="controls__group">
+            <h2>Boyama şekli</h2>
+            <div class="mode-row" role="group" aria-label="Boyama şekli">
+              <button class="mode-btn is-active" data-mode="fill" type="button">
+                <iconify-icon icon="ph:cursor-click-duotone" aria-hidden="true"></iconify-icon>
+                Dokun &amp; Boya
+              </button>
+              <button class="mode-btn" data-mode="brush" type="button">
+                <iconify-icon icon="ph:paint-brush-duotone" aria-hidden="true"></iconify-icon>
+                Fırça
+              </button>
+            </div>
+          </div>
+
+          <div class="controls__group">
+            <h2>Renkler</h2>
+            <div class="palette" role="group" aria-label="Renk paleti">
+              <button class="swatch is-active" style="--c: var(--paint-1);"
+                data-color="#e63946" type="button" aria-label="Kırmızı"></button>
+              <button class="swatch" style="--c: var(--paint-2);"
+                data-color="#f9a03f" type="button" aria-label="Turuncu"></button>
+              <button class="swatch" style="--c: var(--paint-3);"
+                data-color="#f2b705" type="button" aria-label="Sarı"></button>
+              <button class="swatch" style="--c: var(--paint-4);"
+                data-color="#57b894" type="button" aria-label="Yeşil"></button>
+              <button class="swatch" style="--c: var(--paint-5);"
+                data-color="#4d96ff" type="button" aria-label="Mavi"></button>
+              <button class="swatch" style="--c: var(--paint-6);"
+                data-color="#9b6fdd" type="button" aria-label="Mor"></button>
+              <button class="swatch" style="--c: var(--paint-7);"
+                data-color="#f48ca3" type="button" aria-label="Pembe"></button>
+              <button class="swatch swatch--eraser" data-color="eraser"
+                type="button" aria-label="Silgi">
+                <iconify-icon icon="ph:eraser-duotone" aria-hidden="true"></iconify-icon>
+              </button>
+            </div>
+          </div>
+
+          <div class="controls__group">
+            <h2>Araçlar</h2>
+            <div class="action-row">
+              <button class="action-btn" id="undoBtn" type="button">
+                <iconify-icon icon="ph:arrow-counter-clockwise-bold"
+                  aria-hidden="true"></iconify-icon>
+                Geri Al
+              </button>
+              <button class="action-btn" id="clearBtn" type="button">
+                <iconify-icon icon="ph:broom-duotone" aria-hidden="true"></iconify-icon>
+                Temizle
+              </button>
+              <button class="action-btn" id="downloadBtn" type="button">
+                <iconify-icon icon="ph:download-simple-bold" aria-hidden="true"></iconify-icon>
+                Resmini İndir
+              </button>
+              <button class="action-btn" id="printBtn" type="button">
+                <iconify-icon icon="ph:printer-duotone" aria-hidden="true"></iconify-icon>
+                Yazdır
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="atelier__promo">
+        <p>Gerçeğini de dene! Sulutopi setleri suyla canlanan kartlarıyla kutuda 🎨</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="index.html#setler">Setleri Keşfet</a>
+          <a class="btn btn--butter" href="index.html#satin-al">Şimdi Satışta</a>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- ============ ALT BİLGİ ============ -->
+  <footer class="footer">
+    <div class="footer__bottom container">
+      <span>© <span id="year"></span> Sulutopi. Tüm hakları saklıdır.</span>
+      <span>Küçük sanatçılar için sevgiyle 🎨</span>
+    </div>
+  </footer>
+
+  <script src="js/boya.js" defer></script>
+</body>
+</html>

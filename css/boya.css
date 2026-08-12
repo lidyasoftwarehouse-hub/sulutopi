@@ -1,0 +1,327 @@
+/* =====================================================
+   SULUTOPI — Boyama Atölyesi
+   home.css üzerine sayfaya özel stiller.
+   ===================================================== */
+
+:root {
+  --paint-1: #e63946;
+  --paint-2: #f9a03f;
+  --paint-3: #f2b705;
+  --paint-4: #57b894;
+  --paint-5: #4d96ff;
+  --paint-6: #9b6fdd;
+  --paint-7: #f48ca3;
+  --paint-8: #8a5a3b;
+  --board-line: #2f2418;
+}
+
+.atelier {
+  padding: var(--space-5) 0 var(--space-10);
+}
+
+.atelier__head {
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.atelier__head h1 {
+  margin-top: var(--space-2);
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+
+.atelier__head p {
+  margin-top: var(--space-1);
+  color: var(--color-ink-soft);
+}
+
+/* ---- Çizim seçici ---- */
+.picker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.picker__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 12px 22px;
+  border: 2px solid var(--color-ink);
+  border-radius: 999px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-pop);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  cursor: pointer;
+  transition: transform var(--t) var(--ease), background var(--t) var(--ease);
+}
+
+.picker__btn:hover {
+  transform: translateY(-2px);
+}
+
+.picker__btn.is-active {
+  background: var(--color-butter);
+}
+
+/* ---- Tezgah düzeni ---- */
+.atelier__grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+@media (min-width: 860px) {
+  .atelier__grid {
+    grid-template-columns: minmax(0, 640px) minmax(260px, 1fr);
+    align-items: start;
+  }
+}
+
+/* ---- Boyama tahtası ---- */
+.board {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+  border: 3px solid var(--color-ink);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  touch-action: none;
+}
+
+.board .art,
+.board canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.board canvas {
+  z-index: 2;
+}
+
+.art--regions {
+  z-index: 1;
+}
+
+.art--outlines {
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Bölge katmanı: detay çizgileri gizli */
+.art--regions .details {
+  display: none;
+}
+
+.art--regions .rgn {
+  cursor: pointer;
+}
+
+/* Kontur katmanı: sadece çizgiler */
+.art--outlines .rgn {
+  fill: none;
+  stroke: var(--board-line);
+  stroke-width: 5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.art--outlines .details {
+  fill: none;
+  stroke: var(--board-line);
+  stroke-width: 4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.art--outlines .details .dot {
+  fill: var(--board-line);
+  stroke: none;
+}
+
+.board.is-brush canvas {
+  cursor: crosshair;
+}
+
+.board.is-fill canvas {
+  pointer-events: none;
+}
+
+/* ---- Kontroller ---- */
+.controls {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+}
+
+.controls__group h2 {
+  font-size: 1rem;
+  margin-bottom: var(--space-1);
+  color: var(--color-ink-soft);
+}
+
+.mode-row,
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.mode-btn,
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border: 2px solid var(--color-ink);
+  border-radius: 999px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-pop);
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  cursor: pointer;
+  transition: transform var(--t) var(--ease), background var(--t) var(--ease);
+}
+
+.mode-btn:hover,
+.action-btn:hover {
+  transform: translateY(-2px);
+}
+
+.mode-btn:active,
+.action-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 rgba(51, 38, 27, 0.9);
+}
+
+.mode-btn.is-active {
+  background: var(--color-mint);
+  color: #ffffff;
+}
+
+.mode-btn iconify-icon,
+.action-btn iconify-icon {
+  font-size: 1.25em;
+}
+
+/* ---- Palet ---- */
+.palette {
+  display: grid;
+  grid-template-columns: repeat(4, 56px);
+  gap: var(--space-1);
+}
+
+.swatch {
+  width: 56px;
+  height: 56px;
+  border: 3px solid var(--color-ink);
+  border-radius: 18px;
+  background: var(--c);
+  box-shadow: var(--shadow-pop);
+  cursor: pointer;
+  transition: transform var(--t) var(--ease);
+}
+
+.swatch:hover {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+.swatch.is-active {
+  transform: scale(1.12);
+  outline: 4px solid var(--color-ink);
+  outline-offset: 3px;
+}
+
+.swatch--eraser {
+  display: grid;
+  place-items: center;
+  background: var(--color-surface);
+  font-size: 1.5rem;
+  color: var(--color-ink-soft);
+}
+
+@media (min-width: 860px) {
+  .palette {
+    grid-template-columns: repeat(4, 60px);
+  }
+
+  .swatch {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* ---- Alt tanıtım ---- */
+.atelier__promo {
+  margin-top: var(--space-8);
+  padding: var(--space-4);
+  border: 2px dashed var(--color-primary);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.atelier__promo p {
+  margin-bottom: var(--space-2);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.atelier__promo .btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+/* ---- Yazdırma ---- */
+@media print {
+  .nav,
+  .atelier__head,
+  .picker,
+  .controls,
+  .atelier__promo,
+  .footer,
+  .board canvas,
+  .art--regions {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff;
+  }
+
+  .atelier {
+    padding: 0;
+  }
+
+  .atelier__grid {
+    display: block;
+  }
+
+  .board {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    border: none;
+    box-shadow: none;
+    aspect-ratio: 1 / 1;
+  }
+
+  .art--outlines {
+    position: absolute;
+    inset: 0;
+  }
+}
