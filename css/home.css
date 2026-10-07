@@ -942,6 +942,12 @@ stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
   padding: 6px;
 }
 
+/* App-icon style logos fill the tile edge to edge */
+.store-card--hepsiburada .store-card__icon img,
+.store-card--shopier .store-card__icon img {
+  padding: 0;
+}
+
 .store-card--trendyol .store-card__icon { color: var(--color-trendyol); }
 .store-card--hepsiburada .store-card__icon { color: var(--color-hepsiburada); }
 .store-card--shopier .store-card__icon { color: var(--color-shopier); }
