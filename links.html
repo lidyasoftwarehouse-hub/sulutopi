@@ -126,40 +126,6 @@
     .lt-bio .lt-line + .lt-line { margin-top: 4px; }
     .lt-bio .lt-em { color: var(--color-primary-deep); font-weight: 600; }
 
-    /* ---- Socials ---- */
-    .lt-socials {
-      display: flex;
-      gap: var(--space-2);
-      margin-top: var(--space-1);
-    }
-    .lt-socials a {
-      display: grid;
-      place-items: center;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--color-surface);
-      color: var(--color-text);
-      font-size: 1.4rem;
-      border: 1px solid var(--color-line);
-      box-shadow: var(--shadow-sm);
-      transition: transform var(--t) var(--ease),
-                  background var(--t) var(--ease),
-                  color var(--t) var(--ease),
-                  border-color var(--t) var(--ease);
-    }
-    .lt-socials .social-logo {
-      width: 24px;
-      height: 24px;
-      border-radius: 7px;
-    }
-    .lt-socials a:hover {
-      transform: translateY(-3px) scale(1.05);
-      background: var(--grad-primary);
-      color: #ffffff;
-      border-color: transparent;
-    }
-
     /* ---- Link list ---- */
     .lt-links {
       width: 100%;
@@ -185,25 +151,6 @@
       transform: translateY(-3px);
       box-shadow: var(--shadow-md);
       border-color: rgba(255, 111, 97, 0.4);
-    }
-
-    /* Featured card (with banner image) */
-    .lt-link--feature .lt-link__banner {
-      position: relative;
-      padding: 10px 10px 0;
-    }
-    .lt-link--feature .lt-link__banner img {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      border-radius: 16px;
-      background: var(--color-surface-2);
-    }
-    .lt-link--feature .lt-link__chin {
-      padding: var(--space-2) var(--space-3);
-      text-align: center;
-      font-weight: 700;
-      color: var(--color-text);
     }
 
     /* Stack card */
@@ -237,21 +184,6 @@
       font-weight: 600;
       color: var(--color-text);
       line-height: 1.25;
-    }
-
-    /* Badge (Çok Yakında / Soon) */
-    .lt-badge {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 0.6875rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      background: var(--grad-primary);
-      color: #ffffff;
-      box-shadow: 0 4px 12px rgba(255, 111, 97, 0.4);
     }
 
     /* ---- Footer ---- */
@@ -353,38 +285,10 @@
       
         </p>
 
-        <nav class="lt-socials" aria-label="Social media">
-          <a href="https://instagram.com/sulutopi"
-             target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <img class="social-logo" src="images/instagram.png" alt="">
-          </a>
-          <a href="https://www.facebook.com/sulutopi"
-             target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <img class="social-logo" src="images/facebook.png" alt="">
-          </a>
-          <a href="https://tiktok.com/@sulutopi"
-             target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-            <img class="social-logo" src="images/tiktok.png" alt="">
-          </a>
-          <a href="mailto:info@sulutopi.com" aria-label="Email">
-            <iconify-icon icon="ph:envelope-duotone"></iconify-icon>
-          </a>
-        </nav>
       </div>
 
       <!-- Links -->
       <div class="lt-links">
-
-        <a class="lt-link lt-link--feature lt-reveal"
-           style="animation-delay: 0.15s;"
-           href="https://www.instagram.com/sulutopi"
-           target="_blank" rel="noopener noreferrer">
-          <span class="lt-badge">Şimdi Satışta</span>
-          <div class="lt-link__banner">
-            <img src="images/logo_sulutopi.png" alt="Sulutopi launch teaser">
-          </div>
-          <div class="lt-link__chin">Şimdi Satışta — Sulutopi</div>
-        </a>
 
         <a class="lt-link lt-link--stack lt-reveal"
            style="animation-delay: 0.22s;"
