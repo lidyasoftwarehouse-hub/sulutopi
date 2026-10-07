@@ -148,6 +148,11 @@
                   color var(--t) var(--ease),
                   border-color var(--t) var(--ease);
     }
+    .lt-socials .social-logo {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+    }
     .lt-socials a:hover {
       transform: translateY(-3px) scale(1.05);
       background: var(--grad-primary);
@@ -351,15 +356,15 @@
         <nav class="lt-socials" aria-label="Social media">
           <a href="https://instagram.com/sulutopi"
              target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <iconify-icon icon="ph:instagram-logo-duotone"></iconify-icon>
+            <img class="social-logo" src="images/instagram.png" alt="">
           </a>
           <a href="https://www.facebook.com/sulutopi"
              target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <iconify-icon icon="ph:facebook-logo-duotone"></iconify-icon>
+            <img class="social-logo" src="images/facebook.png" alt="">
           </a>
           <a href="https://tiktok.com/@sulutopi"
              target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-            <iconify-icon icon="ph:tiktok-logo-duotone"></iconify-icon>
+            <img class="social-logo" src="images/tiktok.png" alt="">
           </a>
           <a href="mailto:info@sulutopi.com" aria-label="Email">
             <iconify-icon icon="ph:envelope-duotone"></iconify-icon>
@@ -433,8 +438,8 @@
            style="animation-delay: 0.46s;"
            href="https://www.instagram.com/sulutopi"
            target="_blank" rel="noopener noreferrer">
-          <span class="lt-link__thumb">
-            <iconify-icon icon="ph:instagram-logo-duotone"></iconify-icon>
+          <span class="lt-link__thumb lt-link__thumb--full">
+            <img src="images/instagram.png" alt="Instagram">
           </span>
           <span class="lt-link__title">Instagram'da Takip Et</span>
         </a>
@@ -443,8 +448,8 @@
            style="animation-delay: 0.52s;"
            href="https://tiktok.com/@sulutopi"
            target="_blank" rel="noopener noreferrer">
-          <span class="lt-link__thumb">
-            <iconify-icon icon="ph:tiktok-logo-duotone"></iconify-icon>
+          <span class="lt-link__thumb lt-link__thumb--full">
+            <img src="images/tiktok.png" alt="TikTok">
           </span>
           <span class="lt-link__title">TikTok'ta İzle</span>
         </a>

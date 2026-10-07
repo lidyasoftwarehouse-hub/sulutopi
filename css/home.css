@@ -1050,6 +1050,12 @@ stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
   transition: transform var(--t) var(--ease), background var(--t) var(--ease);
 }
 
+.footer__social .social-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+}
+
 .footer__social a:hover {
   transform: translateY(-3px) rotate(-6deg);
   background: var(--color-butter);
