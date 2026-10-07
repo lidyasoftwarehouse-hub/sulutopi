@@ -927,11 +927,11 @@ stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
   display: grid;
   place-items: center;
   flex: 0 0 auto;
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
   border-radius: var(--radius-sm);
   background: var(--color-bg-soft);
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   overflow: hidden;
 }
 
@@ -1051,9 +1051,9 @@ stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
 }
 
 .footer__social .social-logo {
-  width: 24px;
-  height: 24px;
-  border-radius: 7px;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
 }
 
 .footer__social a:hover {
